@@ -74,7 +74,7 @@ int main()
 	int curr_realtor_sales;
 
 	// Preform processing on data:
-	for (int i = 0;i < MAX_REALTORS;i++)
+	for (i = 0;i < MAX_REALTORS;i++)
 	{
 		// Alternative condition to stop execution
 		bool realtor_exists = realtor_names_arr[i].empty();
