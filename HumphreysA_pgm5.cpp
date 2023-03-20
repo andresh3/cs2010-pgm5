@@ -5,8 +5,12 @@ using namespace std;
 
 /*
 * Andrew Humphreys Pgm5 CS2010 LEC1003
-* 
-* 
+* Purpose: To provide a basic analysis of data reguarding realtor sales.
+* Input: A raw-text file containing up to 25 lines of realtor name followed by number of sales seperated by a space.
+* Processing: The program catches typos created by accidental negative numbers,
+*	Finds the realtor and the asscioated max and min number of sales,
+*	and calculates a total sum of sales.
+* Output: Outputs to console all of the realtors and their sales, and the above processed info (min, max, total sales).
 * 
 *
 */
@@ -57,7 +61,7 @@ int main()
 			break;
 	}
 
-
+	in_fs.close();
 	// Print each realtor, and then find the highest sales
 
 	realtor_most_sales = 0;
@@ -69,6 +73,7 @@ int main()
 	int realtor_number;
 	int curr_realtor_sales;
 
+	// Preform processing on data:
 	for (int i = 0;i < MAX_REALTORS;i++)
 	{
 		// Alternative condition to stop execution
@@ -79,6 +84,7 @@ int main()
 		realtor_number = i + 1;
 		cout << "Realtor " << realtor_number << ", " << realtor_names[i] << ", sold " << realtor_sales_arr[i] << " houses." << endl;
 
+		// Calculate max, min and last total
 		curr_realtor_sales = realtor_sales_arr[i];
 		if (curr_realtor_sales > most_sales)
 		{
@@ -96,6 +102,8 @@ int main()
 
 	}
 
+
+	// Last provide program output.
 	realtor_number = realtor_most_sales + 1;
 	cout << "The winner is Realtor " << realtor_number << ", " << realtor_names[realtor_most_sales] << ", who sold " << most_sales << " houses." << endl;
 
@@ -104,9 +112,6 @@ int main()
 
 	cout << "And in total all Realtors sold " << total_sales << " houses." << endl;
 	
-
-
-	in_fs.close();
 
 
 
