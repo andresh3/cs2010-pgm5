@@ -60,8 +60,8 @@ int main()
 		if (i > MAX_REALTORS) // Deal with unexpected behavior
 			break;
 	}
-
 	in_fs.close();
+
 	// Print each realtor, and then find the highest sales
 
 	top_realtor = 0;
